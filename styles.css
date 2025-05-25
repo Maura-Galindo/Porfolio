@@ -303,31 +303,28 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: center;
+    justify-content: flex-start; /* <-- cambio aquí */
 }
 
 .certification-image {
     width: calc(25% - 30px); /* 4 por fila */
-    max-width: 350px; /* Aumenta el tamaño si lo deseas */
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover */
 .certification-image:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive: tablet */
 @media (max-width: 1024px) {
     .certification-image {
         width: calc(50% - 20px); /* 2 por fila */
     }
 }
 
-/* Responsive: móvil */
 @media (max-width: 600px) {
     .certification-image {
         width: 100%; /* 1 por fila */
