@@ -299,47 +299,37 @@ body {
 }
 
 /* Estilos para la sección de Certificaciones */
-
-.certifications {
-    padding: 40px 0;
-}
-
 .certifications-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center; /* Centra las imágenes */
+    gap: 40px;
+    justify-content: center;
 }
 
 .certification-image {
-    width: calc(33.333% - 20px); /* 3 por fila (más grandes que 4) */
-    max-width: 350px; /* Aumenté el tamaño máximo */
+    width: calc(25% - 30px); /* 4 por fila con espacio entre ellas */
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    object-fit: contain; /* Asegura que toda la imagen sea visible */
-    border: 1px solid #eee; /* Borde sutil */
 }
 
+/* Efecto hover */
 .certification-image:hover {
-    transform: scale(1.08); /* Efecto de zoom ligeramente mayor */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive */
 @media (max-width: 1024px) {
     .certification-image {
-        width: calc(50% - 15px); /* 2 por fila */
+        width: calc(50% - 20px); /* 2 por fila en tablet */
     }
 }
 
 @media (max-width: 600px) {
     .certification-image {
-        width: 100%; /* 1 por fila */
-        max-width: 100%;
-    }
-    
-    .certifications {
-        padding: 20px 10px;
+        width: 100%; /* 1 por fila en móvil */
     }
 }
 
