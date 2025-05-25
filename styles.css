@@ -302,27 +302,48 @@ body {
 .certifications-grid {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Más espacio entre las filas */
-    align-items: center; /* Centrar las filas */
+    gap: 40px; /* Espacio entre filas */
+    align-items: center;
 }
 
 .certification-row {
     display: flex;
-    gap: 40px; /* Más espacio entre las imágenes */
-    justify-content: center; /* Centrar las imágenes en cada fila */
+    flex-wrap: wrap; /* Permite que las imágenes bajen si no caben */
+    gap: 40px;
+    justify-content: center;
 }
 
 .certification-image {
-    width: 350px; /* Imágenes más grandes */
+    width: 100%;
+    max-width: 350px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto hover */
 .certification-image:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* RESPONSIVE: Ajuste para tablets y móviles */
+@media (max-width: 1024px) {
+    .certification-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .certification-image {
+        max-width: 100%; /* Ocupar todo el ancho disponible */
+    }
+
+    .certification-row {
+        gap: 20px;
+    }
+}
+
 
 /* Estilos para la sección de contacto */
 .contact-content {
