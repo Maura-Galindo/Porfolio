@@ -300,38 +300,25 @@ body {
 
 /* Estilos para la sección de Certificaciones */
 .certifications-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
-    justify-content: center;
+    justify-items: center;
 }
 
 .certification-image {
-    width: calc(25% - 30px); /* 4 por fila con espacio entre ellas */
+    width: 100%;
     max-width: 300px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover */
 .certification-image:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .certification-image {
-        width: calc(50% - 20px); /* 2 por fila en tablet */
-    }
-}
-
-@media (max-width: 600px) {
-    .certification-image {
-        width: 100%; /* 1 por fila en móvil */
-    }
-}
 
 
 /* Estilos para la sección de contacto */
