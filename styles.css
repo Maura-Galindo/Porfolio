@@ -301,20 +301,13 @@ body {
 /* Estilos para la sección de Certificaciones */
 .certifications-grid {
     display: flex;
-    flex-direction: column;
-    gap: 40px; /* Espacio entre filas */
-    align-items: center;
-}
-
-.certification-row {
-    display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes bajen si no caben */
+    flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
 }
 
 .certification-image {
-    width: 100%;
+    width: calc(25% - 30px); /* 4 por fila con espacio entre ellas */
     max-width: 300px;
     height: auto;
     border-radius: 8px;
@@ -327,20 +320,16 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* RESPONSIVE: Ajuste para tablets y móviles */
+/* Responsive */
 @media (max-width: 1024px) {
     .certification-image {
-        max-width: 300px;
+        width: calc(50% - 20px); /* 2 por fila en tablet */
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .certification-image {
-        max-width: 100%; /* Ocupar todo el ancho disponible */
-    }
-
-    .certification-row {
-        gap: 20px;
+        width: 100%; /* 1 por fila en móvil */
     }
 }
 
