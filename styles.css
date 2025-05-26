@@ -308,14 +308,14 @@ body {
 
 .certification-row {
     display: flex;
-    flex-wrap: wrap; /* Permite que las imágenes bajen si no caben */
-    gap: 40px;
+    flex-wrap: nowrap; /* Evita que las imágenes bajen */
+    gap: 30px; /* Menos espacio entre imágenes */
     justify-content: center;
 }
 
 .certification-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px; /* Ajusta el tamaño de las imágenes */
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -323,14 +323,14 @@ body {
 
 /* Efecto hover */
 .certification-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.1); /* Aumenta un poco el tamaño */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* RESPONSIVE: Ajuste para tablets y móviles */
 @media (max-width: 1024px) {
     .certification-image {
-        max-width: 300px;
+        max-width: 220px; /* Ajusta el tamaño para tablets */
     }
 }
 
@@ -342,8 +342,7 @@ body {
     .certification-row {
         gap: 20px;
     }
-}   
-
+}
 
 /* Estilos para la sección de contacto */
 .contact-content {
@@ -425,7 +424,7 @@ body {
     border-radius: 4px;
     border: 1px solid var(--primary-color);
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color black);
 }
 
 .contact-form button {
