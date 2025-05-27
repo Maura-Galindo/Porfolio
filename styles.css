@@ -301,6 +301,7 @@ body {
 /* Estilos para la sección de Certificaciones */
 .certifications-grid {
     display: flex;
+<<<<<<< HEAD
     flex-direction: column;
     gap: 40px; /* Espacio entre filas */
     align-items: center;
@@ -310,12 +311,21 @@ body {
     display: flex;
     flex-wrap: nowrap; /* Evita que las imágenes bajen */
     gap: 30px; /* Menos espacio entre imágenes */
+=======
+    flex-wrap: wrap;
+    gap: 40px;
+>>>>>>> fc2c7b881e90b288352f4f2447418521788a2be8
     justify-content: center;
 }
 
 .certification-image {
+<<<<<<< HEAD
     width: 100%;
     max-width: 320px; /* Ajusta el tamaño de las imágenes */
+=======
+    width: calc(25% - 30px); /* 4 por fila con espacio entre ellas */
+    max-width: 300px;
+>>>>>>> fc2c7b881e90b288352f4f2447418521788a2be8
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -327,6 +337,7 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+<<<<<<< HEAD
 /* RESPONSIVE: Ajuste para tablets y móviles */
 @media (max-width: 1024px) {
     .certification-image {
@@ -344,6 +355,22 @@ body {
     }
 }
 
+=======
+/* Responsive */
+@media (max-width: 1024px) {
+    .certification-image {
+        width: calc(50% - 20px); /* 2 por fila en tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .certification-image {
+        width: 100%; /* 1 por fila en móvil */
+    }
+}
+
+
+>>>>>>> fc2c7b881e90b288352f4f2447418521788a2be8
 /* Estilos para la sección de contacto */
 .contact-content {
     display: flex;
